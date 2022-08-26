@@ -9,6 +9,7 @@ const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 app.use(express.urlencoded({ limit: '10mb', extended: false }));
 app.use(express.json());
@@ -30,5 +31,6 @@ db.once('open', () => console.error('Connected to Mongoose'))
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 app.listen(process.env.PORT || 3000)
