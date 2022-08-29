@@ -10,15 +10,19 @@
         rel="stylesheet" />
 
     <!-- <script src="javascripts/fileUpload.js"></script> -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
 
     <title>Mybrary</title>
 </head>
 
 <body>
+    <div class="container">
     <%- include('../partials/header.ejs') %>
+        <div class="inner-container">
         <%- include('../partials/errorMessage.ejs') %>
-
             <%- body %>
+        </div>
+    </div>
                 <script
                     src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
                 <script
